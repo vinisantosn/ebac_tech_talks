@@ -1,10 +1,13 @@
 @use "hero.scss";
+@use "componentes/infos_bar";
+@use "componentes/buttons";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     color: white;
+    list-style: none;
 }
 .container{
     max-width: 960px;
