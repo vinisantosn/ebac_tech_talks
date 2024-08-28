@@ -1,34 +1,53 @@
-.event{
-    padding: 80px 0;
-    background-image: linear-gradient(#186CA7,#442BD8);
-    .container{
-        display: flex;
-    }
-    &__image{
-        max-width: 360px;
-    }
-    &__details{
-        margin-right: 40px;
-        &__title{
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 16px;
-        }
+@use "variables";
+.event {
+  padding: 80px 0;
 
-        &__description{
-            line-height: 22px;
-        }
+  &--frontend {
+    background-image: linear-gradient(variables.$blue, variables.$purple);
+  }
+  &--ux-ui{
+    background-image: linear-gradient(variables.$purple, variables.$pink);
+  }
+  &--data-science {
+    background-image: linear-gradient(variables.$pink, variables.$yellow);
+  }
+  &--back-end {
+    background-image: linear-gradient(variables.$yellow, variables.$pink);
+  }
+  &--image-left{
+    .container{
+        flex-direction: row-reverse;
     }
-    @media (max-width:640){
-        .container{
-            display: block;
-        }
-        &__image{
-            width: 100%;
-        }
-        &__details{
-            margin-right: 0;
-            margin-bottom: 16px;
-        }
+  }
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+  &__image {
+    max-width: 360px;
+  }
+  &__details {
+    
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 16px;
     }
+
+    &__description {
+      line-height: 22px;
+    }
+  }
+  @media (max-width: 640) {
+    .container {
+      display: block;
+    }
+    &__image {
+      width: 100%;
+    }
+    &__details {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
 }

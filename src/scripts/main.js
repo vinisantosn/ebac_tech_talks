@@ -1,1 +1,1 @@
-console.log("SHANKS")
+AOS.init();
